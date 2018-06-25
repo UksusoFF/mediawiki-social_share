@@ -24,7 +24,7 @@
 				"mobile",
 				"desktop"
 			]
-		},
+		}
 	},
 	"config": {
 		"SocialShareMain": false,
