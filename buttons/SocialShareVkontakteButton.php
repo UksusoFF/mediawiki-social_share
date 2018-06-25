@@ -7,7 +7,7 @@ class SocialShareVkontakteButton extends SocialShareBaseButton
 
     public function shareLink()
     {
-        return 'http://vk.com/share.php?' . http_build_query([
+        return 'https://vk.com/share.php?' . http_build_query([
                 'url' => $this->titleLink(),
             ]);
     }

@@ -7,7 +7,7 @@ class SocialShareFacebookButton extends SocialShareBaseButton
 
     public function shareLink()
     {
-        return 'http://www.facebook.com/sharer.php?' . http_build_query([
+        return 'https://www.facebook.com/sharer.php?' . http_build_query([
                 'u' => $this->titleLink(),
             ]);
     }
