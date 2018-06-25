@@ -34,8 +34,10 @@
 		"SocialShareServicesHeader": "vkontakte,facebook,twitter,google,odnoklassniki"
 	},
 	"Hooks": {
+        "ArticleViewHeader": [
+            "SocialShare::onArticleViewHeader"
+        ],
 		"SkinBuildSidebar": [
-			"SocialShare::onArticleViewHeader",
 			"SocialShare::onSkinBuildSidebar"
 		]
 	},
