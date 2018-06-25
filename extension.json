@@ -9,7 +9,7 @@
 	"descriptionmsg": "descriptionmsg",
 	"type": "other",
 	"AutoloadClasses": {
-		"SocialShare": "SocialShare.class.php",
+		"SocialShare": "SocialShare.body.php",
 		"SocialShareBaseButton": "buttons/SocialShareBaseButton.php",
 		"SocialShareVkontakteButton": "buttons/SocialShareVkontakteButton.php",
 		"SocialShareFacebookButton": "buttons/SocialShareFacebookButton.php",
@@ -27,7 +27,7 @@
 		}
 	},
 	"config": {
-		"SocialShareMain": false,
+		"SocialShareMain": true,
 		"SocialShareSidebar": true,
 		"SocialShareHeader": true,
 		"SocialShareServicesSidebar": "vkontakte,facebook,twitter,google,odnoklassniki",
@@ -35,7 +35,8 @@
 	},
 	"Hooks": {
 		"SkinBuildSidebar": [
-			"SocialShare::socialShareSidebar"
+			"ArticleViewHeader::onArticleViewHeader",
+			"SocialShare::onSkinBuildSidebar"
 		]
 	},
 	"MessagesDirs": {

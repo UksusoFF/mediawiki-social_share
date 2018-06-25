@@ -29,7 +29,7 @@ class SocialShareBaseButton
 
     public function titleLink()
     {
-        return $this->title->getLinkURL($this->query);
+        return $this->title->getFullURL($this->query);
     }
 
 }
