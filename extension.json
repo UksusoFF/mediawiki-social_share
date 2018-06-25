@@ -1,6 +1,7 @@
 {
 	"name": "SocialShare",
 	"version": "2018-06-21",
+	"license-name": "MIT",
 	"author": [
 		"UksusoFF"
 	],
@@ -8,19 +9,31 @@
 	"descriptionmsg": "descriptionmsg",
 	"type": "other",
 	"AutoloadClasses": {
-		"SocialShare": "SocialShare.class.php"
+		"SocialShare": "SocialShare.class.php",
+		"SocialShareBaseButton": "buttons/SocialShareBaseButton.php",
+		"SocialShareVkontakteButton": "buttons/SocialShareVkontakteButton.php",
+		"SocialShareFacebookButton": "buttons/SocialShareFacebookButton.php",
+		"SocialShareTwitterButton": "buttons/SocialShareTwitterButton.php",
+		"SocialShareGoogleButton": "buttons/SocialShareGoogleButton.php"
+	},
+	"ResourceModules": {
+		"ext.socialShare.styles": {
+			"styles": "ext.socialShare.styles.css",
+			"position": "top",
+			"targets": [
+				"mobile",
+				"desktop"
+			]
+		},
 	},
 	"config": {
 		"SocialShareMain": false,
 		"SocialShareSidebar": true,
 		"SocialShareHeader": true,
-		"SocialShareServicesSidebar": "vkontakte,twitter,facebook,odnoklassniki",
-		"SocialShareServicesHeader": "vkontakte,twitter,facebook,odnoklassniki"
+		"SocialShareServicesSidebar": "vkontakte,facebook,twitter,google,odnoklassniki",
+		"SocialShareServicesHeader": "vkontakte,facebook,twitter,google,odnoklassniki"
 	},
 	"Hooks": {
-		"ArticleViewHeader": [
-			"SocialShare::socialShareHeader"
-		],
 		"SkinBuildSidebar": [
 			"SocialShare::socialShareSidebar"
 		]

@@ -2,41 +2,6 @@
 
 class SocialShare
 {
-    /**
-     * @param \Article $article
-     * @param bool &$outputDone
-     * @param bool &$pcache
-     *
-     * @return bool
-     */
-    public static function socialShareHeader(&$article, &$outputDone, &$pcache)
-    {
-        global $wgOut,
-               $wgSocialShareMain,
-               $wgSocialShareSidebar,
-               $wgSocialShareHeader,
-               $wgSocialShareServicesSidebar,
-               $wgSocialShareServicesHeader;
-
-        if (
-            !MWNamespace::isContent($article->getTitle()->getNamespace())
-            || !$wgSocialShareHeader
-            || (
-                $article->getTitle()->equals(Title::newMainPage()) &&
-                !$wgSocialShareMain
-            )
-        ) {
-            return true;
-        }
-
-        $wgOut->setIndicators([
-            'share' => '<div class="share"></div>',
-        ]);
-
-        $wgOut->addHTML('Share');
-
-        return true;
-    }
 
     /**
      * @param \Skin $skin
@@ -53,12 +18,55 @@ class SocialShare
                $wgSocialShareServicesSidebar,
                $wgSocialShareServicesHeader;
 
-        if (!$wgSocialShareSidebar) {
+        $title = $skin->getTitle();
+
+        if (
+            !MWNamespace::isContent($title->getNamespace())
+            || ($title->equals(Title::newMainPage()) && !$wgSocialShareMain)
+        ) {
             return true;
         }
 
-        $bar['share'] = '<div class="share"></div>';
+        if ($wgSocialShareSidebar) {
+            $bar['share'] = SocialShare::socialShareRender($title, $wgSocialShareServicesSidebar, [
+                'from' => 'share',
+            ]);
+        }
+
+        if ($wgSocialShareHeader) {
+            $wgOut->setIndicators([
+                'share' => SocialShare::socialShareRender($title, $wgSocialShareServicesHeader, [
+                    'from' => 'share',
+                ]),
+            ]);
+        }
 
         return true;
     }
+
+    /**
+     * @param \Title $title
+     * @param string $services
+     * @param array $query
+     *
+     * @return string
+     */
+    private static function socialShareRender(Title $title, $services, array $query)
+    {
+        $buttons = [
+            'vkontakte' => (new SocialShareVkontakteButton($title, $query))->render(),
+            'facebook' => (new SocialShareFacebookButton($title, $query))->render(),
+            'twitter' => (new SocialShareTwitterButton($title, $query))->render(),
+            'google' => (new SocialShareGoogleButton($title, $query))->render(),
+        ];
+
+        $output = '';
+
+        foreach (explode(',', $services) as $service) {
+            $output .= isset($buttons[$service]) ? $buttons[$service] : '';
+        }
+
+        return "<div class=\"share\">$output</div>";
+    }
+
 }
