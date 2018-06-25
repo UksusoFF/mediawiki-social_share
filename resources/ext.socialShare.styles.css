@@ -1,3 +1,19 @@
-/*
- * TODO: Add styles.
- */
+.share {
+    margin: 0 -2px;
+}
+
+.share .social-share-link {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 2px;
+    background-color: #000;
+    border-radius: 2px;
+    color: white;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
