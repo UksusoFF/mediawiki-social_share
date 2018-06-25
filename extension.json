@@ -18,7 +18,7 @@
 	},
 	"ResourceModules": {
 		"ext.socialShare.styles": {
-			"styles": "ext.socialShare.styles.css",
+			"styles": "resources/ext.socialShare.styles.css",
 			"position": "top",
 			"targets": [
 				"mobile",
