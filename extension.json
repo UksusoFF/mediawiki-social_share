@@ -35,7 +35,7 @@
 	},
 	"Hooks": {
 		"SkinBuildSidebar": [
-			"ArticleViewHeader::onArticleViewHeader",
+			"SocialShare::onArticleViewHeader",
 			"SocialShare::onSkinBuildSidebar"
 		]
 	},
