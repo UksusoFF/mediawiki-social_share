@@ -24,7 +24,7 @@ class SocialShare
         if (
             !MWNamespace::isContent($title->getNamespace())
             || !$wgSocialShareHeader
-            || ($title->equals(Title::newMainPage()) && !$wgSocialShareMain)
+            || ($title->isMainPage() && !$wgSocialShareMain)
         ) {
             return true;
         }
@@ -55,7 +55,7 @@ class SocialShare
         if (
             !MWNamespace::isContent($title->getNamespace())
             || !$wgSocialShareSidebar
-            || ($title->equals(Title::newMainPage()) && !$wgSocialShareMain)
+            || ($title->isMainPage() && !$wgSocialShareMain)
         ) {
             return true;
         }
