@@ -25,4 +25,7 @@
 
 .social-share .social-share-prefix {
     line-height: 20px;
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 5px;
 }
