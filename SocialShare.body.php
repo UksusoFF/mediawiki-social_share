@@ -93,7 +93,7 @@ class SocialShare
 
         if ($prefix) {
             $text = wfMessage('share')->plain();
-            $output = "<span>${text}</span>" . $output;
+            $output = "<span>$text</span>" . $output;
         }
 
         return "<div class=\"share\">$output</div>";
