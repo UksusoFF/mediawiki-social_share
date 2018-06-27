@@ -2,6 +2,11 @@
     margin: 0 -2px;
 }
 
+#mw-panel .share {
+    padding: 0.25em 0;
+    text-align: center;
+}
+
 .share .social-share-link {
     width: 20px;
     height: 20px;
