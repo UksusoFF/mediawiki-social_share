@@ -1,13 +1,13 @@
-.share {
+.social-share {
     margin: 0 -2px;
 }
 
-#mw-panel .share {
+#mw-panel .social-share {
     padding: 0.25em 0;
     text-align: center;
 }
 
-.share .social-share-link {
+.social-share .social-share-link {
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -21,4 +21,8 @@
     font-size: 12px;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+.social-share .social-share-prefix {
+    line-height: 20px;
 }
