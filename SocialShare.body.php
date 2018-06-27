@@ -17,6 +17,8 @@ class SocialShare
                $wgSocialShareHeader,
                $wgSocialShareServicesHeader;
 
+        $wgOut->addModules('ext.socialShare');
+
         $title = $article->getTitle();
 
         if (

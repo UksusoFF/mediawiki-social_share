@@ -20,7 +20,7 @@
         "SocialShareGoogleButton": "buttons/SocialShareGoogleButton.php"
     },
     "ResourceModules": {
-        "ext.socialShare.styles": {
+        "ext.socialShare": {
             "scripts": [],
             "styles": [
                 "ext.socialShare.styles.css"
