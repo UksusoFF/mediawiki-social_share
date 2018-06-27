@@ -5,6 +5,9 @@
     "author": [
         "UksusoFF"
     ],
+    "requires": {
+        "MediaWiki": ">= 1.29.0"
+    },
     "url": "https://github.com/UksusoFF/mediawiki-social_share",
     "descriptionmsg": "descriptionmsg",
     "type": "other",
@@ -18,12 +21,12 @@
     },
     "ResourceModules": {
         "ext.socialShare.styles": {
-            "styles": "ext.socialShare.styles.css",
-            "position": "top",
-            "targets": [
-                "mobile",
-                "desktop"
-            ]
+            "scripts": [],
+            "styles": [
+                "ext.socialShare.styles.css"
+            ],
+            "messages": [],
+            "dependencies": []
         }
     },
     "ResourceFileModulePaths": {
