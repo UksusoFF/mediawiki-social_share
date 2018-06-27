@@ -32,7 +32,7 @@ class SocialShare
         $wgOut->setIndicators([
             'share' => SocialShare::socialShareRender($title, $wgSocialShareServicesHeader, [
                 'from' => 'share',
-            ]),
+            ], true),
         ]);
 
         return true;
@@ -72,9 +72,11 @@ class SocialShare
      * @param string $services
      * @param array $query
      *
+     * @param bool $prefix
+     *
      * @return string
      */
-    private static function socialShareRender(Title $title, $services, array $query)
+    private static function socialShareRender(Title $title, $services, array $query, $prefix = false)
     {
         $buttons = [
             'facebook' => (new SocialShareFacebookButton($title, $query))->render(),
@@ -87,6 +89,11 @@ class SocialShare
 
         foreach (explode(',', $services) as $service) {
             $output .= isset($buttons[$service]) ? $buttons[$service] : '';
+        }
+
+        if ($prefix) {
+            $text = wfMessage('share')->text();
+            $output = "<span>${$text}</span>" . $output;
         }
 
         return "<div class=\"share\">$output</div>";
