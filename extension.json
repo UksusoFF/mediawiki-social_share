@@ -1,50 +1,53 @@
 {
-	"name": "SocialShare",
-	"version": "2018-06-21",
-	"license-name": "MIT",
-	"author": [
-		"UksusoFF"
-	],
-	"url": "https://github.com/UksusoFF/mediawiki-social_share",
-	"descriptionmsg": "descriptionmsg",
-	"type": "other",
-	"AutoloadClasses": {
-		"SocialShare": "SocialShare.body.php",
-		"SocialShareBaseButton": "buttons/SocialShareBaseButton.php",
-		"SocialShareVkontakteButton": "buttons/SocialShareVkontakteButton.php",
-		"SocialShareFacebookButton": "buttons/SocialShareFacebookButton.php",
-		"SocialShareTwitterButton": "buttons/SocialShareTwitterButton.php",
-		"SocialShareGoogleButton": "buttons/SocialShareGoogleButton.php"
-	},
-	"ResourceModules": {
-		"ext.socialShare.styles": {
-			"styles": "resources/ext.socialShare.styles.css",
-			"position": "top",
-			"targets": [
-				"mobile",
-				"desktop"
-			]
-		}
-	},
-	"config": {
-		"SocialShareMain": true,
-		"SocialShareSidebar": true,
-		"SocialShareHeader": true,
-		"SocialShareServicesSidebar": "vkontakte,facebook,twitter,google,odnoklassniki",
-		"SocialShareServicesHeader": "vkontakte,facebook,twitter,google,odnoklassniki"
-	},
-	"Hooks": {
+    "name": "SocialShare",
+    "version": "2018-06-21",
+    "license-name": "MIT",
+    "author": [
+        "UksusoFF"
+    ],
+    "url": "https://github.com/UksusoFF/mediawiki-social_share",
+    "descriptionmsg": "descriptionmsg",
+    "type": "other",
+    "AutoloadClasses": {
+        "SocialShare": "SocialShare.body.php",
+        "SocialShareBaseButton": "buttons/SocialShareBaseButton.php",
+        "SocialShareVkontakteButton": "buttons/SocialShareVkontakteButton.php",
+        "SocialShareFacebookButton": "buttons/SocialShareFacebookButton.php",
+        "SocialShareTwitterButton": "buttons/SocialShareTwitterButton.php",
+        "SocialShareGoogleButton": "buttons/SocialShareGoogleButton.php"
+    },
+    "ResourceModules": {
+        "ext.socialShare.styles": {
+            "styles": "ext.socialShare.styles.css",
+            "position": "top",
+            "targets": [
+                "mobile",
+                "desktop"
+            ]
+        }
+    },
+    "ResourceFileModulePaths": {
+        "localBasePath": "resources"
+    },
+    "config": {
+        "SocialShareMain": true,
+        "SocialShareSidebar": true,
+        "SocialShareHeader": true,
+        "SocialShareServicesSidebar": "vkontakte,facebook,twitter,google,odnoklassniki",
+        "SocialShareServicesHeader": "vkontakte,facebook,twitter,google,odnoklassniki"
+    },
+    "Hooks": {
         "ArticleViewHeader": [
             "SocialShare::onArticleViewHeader"
         ],
-		"SkinBuildSidebar": [
-			"SocialShare::onSkinBuildSidebar"
-		]
-	},
-	"MessagesDirs": {
-		"SocialShare": [
-			"i18n"
-		]
-	},
-	"manifest_version": 1
+        "SkinBuildSidebar": [
+            "SocialShare::onSkinBuildSidebar"
+        ]
+    },
+    "MessagesDirs": {
+        "SocialShare": [
+            "i18n"
+        ]
+    },
+    "manifest_version": 1
 }
