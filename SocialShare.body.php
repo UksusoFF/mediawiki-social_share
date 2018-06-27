@@ -92,7 +92,7 @@ class SocialShare
         }
 
         if ($prefix) {
-            $text = wfMessage('share');
+            $text = wfMessage('share')->inContentLanguage()->plain();
             $output = "<span>${$text}</span>" . $output;
         }
 
