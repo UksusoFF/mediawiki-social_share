@@ -30,9 +30,7 @@ class SocialShare
         }
 
         $wgOut->setIndicators([
-            'share' => SocialShare::socialShareRender($title, $wgSocialShareServicesHeader, [
-                'from' => 'share',
-            ], true),
+            'share' => SocialShare::socialShareRender($title, $wgSocialShareServicesHeader, true),
         ]);
 
         return true;
@@ -46,9 +44,12 @@ class SocialShare
      */
     public static function onSkinBuildSidebar(Skin $skin, &$bar)
     {
-        global $wgSocialShareMain,
+        global $wgOut,
+               $wgSocialShareMain,
                $wgSocialShareSidebar,
                $wgSocialShareServicesSidebar;
+
+        $wgOut->addModules('ext.socialShare');
 
         $title = $skin->getTitle();
 
@@ -60,9 +61,7 @@ class SocialShare
             return true;
         }
 
-        $bar['share'] = SocialShare::socialShareRender($title, $wgSocialShareServicesSidebar, [
-            'from' => 'share',
-        ]);
+        $bar['share'] = SocialShare::socialShareRender($title, $wgSocialShareServicesSidebar);
 
         return true;
     }
@@ -76,13 +75,13 @@ class SocialShare
      *
      * @return string
      */
-    private static function socialShareRender(Title $title, $services, array $query, $prefix = false)
+    private static function socialShareRender(Title $title, $services, $prefix = false)
     {
         $buttons = [
-            'facebook' => (new SocialShareFacebookButton($title, $query))->render(),
-            'google' => (new SocialShareGoogleButton($title, $query))->render(),
-            'twitter' => (new SocialShareTwitterButton($title, $query))->render(),
-            'vkontakte' => (new SocialShareVkontakteButton($title, $query))->render(),
+            'facebook' => (new SocialShareFacebookButton($title))->render(),
+            'google' => (new SocialShareGoogleButton($title))->render(),
+            'twitter' => (new SocialShareTwitterButton($title))->render(),
+            'vkontakte' => (new SocialShareVkontakteButton($title))->render(),
         ];
 
         $output = '';

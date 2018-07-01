@@ -4,17 +4,14 @@ class SocialShareBaseButton
 {
 
     protected $title;
-    protected $query;
 
     public $icon = null;
 
     public function __construct(
-        Title $title,
-        $query
+        Title $title
     )
     {
         $this->title = $title;
-        $this->query = $query;
     }
 
     public function render()
@@ -29,7 +26,7 @@ class SocialShareBaseButton
 
     public function titleLink()
     {
-        return $this->title->getFullURL($this->query);
+        return $this->title->getFullURL();
     }
 
 }
