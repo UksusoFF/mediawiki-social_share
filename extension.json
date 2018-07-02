@@ -14,10 +14,11 @@
     "AutoloadClasses": {
         "SocialShare": "SocialShare.body.php",
         "SocialShareBaseButton": "buttons/SocialShareBaseButton.php",
-        "SocialShareVkontakteButton": "buttons/SocialShareVkontakteButton.php",
         "SocialShareFacebookButton": "buttons/SocialShareFacebookButton.php",
+        "SocialShareGoogleButton": "buttons/SocialShareGoogleButton.php",
+        "SocialShareOdnoklassnikiButton": "buttons/SocialShareOdnoklassnikiButton.php",
         "SocialShareTwitterButton": "buttons/SocialShareTwitterButton.php",
-        "SocialShareGoogleButton": "buttons/SocialShareGoogleButton.php"
+        "SocialShareVkontakteButton": "buttons/SocialShareVkontakteButton.php"
     },
     "ResourceModules": {
         "ext.socialShare": {
