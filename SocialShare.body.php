@@ -82,6 +82,7 @@ class SocialShare
             'google' => (new SocialShareGoogleButton($title))->render(),
             'twitter' => (new SocialShareTwitterButton($title))->render(),
             'vkontakte' => (new SocialShareVkontakteButton($title))->render(),
+            'odnoklassniki' => (new SocialShareOdnoklassnikiButton($title))->render(),
         ];
 
         $output = '';
