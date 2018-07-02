@@ -1,14 +1,17 @@
 <?php
 
+/**
+ * @link https://developers.google.com/+/web/share/
+ */
 class SocialShareGoogleButton extends SocialShareBaseButton
 {
 
     public $icon = 'google';
 
-    public function shareLink()
+    public function getShare()
     {
-        return 'https://plusone.google.com/_/+1/confirm?' . http_build_query([
-                'url' => $this->titleLink(),
+        return 'https://plus.google.com/share?' . http_build_query([
+                'url' => $this->getLink(),
             ]);
     }
 

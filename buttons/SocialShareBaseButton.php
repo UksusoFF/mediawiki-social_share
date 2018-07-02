@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * @link https://github.com/itgalaxy/ss.js
+ */
 class SocialShareBaseButton
 {
 
@@ -16,15 +19,15 @@ class SocialShareBaseButton
 
     public function render()
     {
-        return '<a href="' . $this->shareLink() . '" class="social-share-link ' . $this->icon . '" target="_blank">' . substr($this->icon, 0, 1) . '</a>';
+        return '<a href="' . $this->getShare() . '" class="social-share-link ' . $this->icon . '" target="_blank">' . substr($this->icon, 0, 1) . '</a>';
     }
 
-    public function shareLink()
+    public function getShare()
     {
         return null;
     }
 
-    public function titleLink()
+    public function getLink()
     {
         return $this->title->getFullURL();
     }
