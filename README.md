@@ -17,7 +17,7 @@ For adding image and short description you need install this extensions:
 * [Description2](https://www.mediawiki.org/wiki/Extension:Description2)
 * [OpenGraphMeta](https://www.mediawiki.org/wiki/Extension:OpenGraphMeta)
 
-Tested with MediaWiki 1.30. But should work for 1.25+ version.
+Works with MediaWiki >= 1.29.0 version.
 
 # Alternative extensions
 * [Pluso](https://www.mediawiki.org/wiki/Extension:Pluso)
