@@ -8,7 +8,7 @@ class SocialShareBaseButton
 
     protected $title;
 
-    public $icon = null;
+    public $name = null;
 
     public function __construct(
         Title $title
@@ -19,7 +19,19 @@ class SocialShareBaseButton
 
     public function render()
     {
-        return '<a href="' . $this->getShare() . '" class="social-share-link ' . $this->icon . '" target="_blank">' . substr($this->icon, 0, 1) . '</a>';
+        $attributes = [
+            'href' => $this->getShare(),
+            'class' => "social-share-link {$this->name}",
+            'target' => '_blank',
+            'title' => wfMessage("share-{$this->name}")->plain(),
+        ];
+
+        $output = '';
+        array_walk($attributes, function($item, $key) use (&$output) {
+            $output .= " \"$key\"=\"$item\"";
+        });
+
+        return "<a$output>" . substr($this->name, 0, 1) . "</a>";
     }
 
     public function getShare()

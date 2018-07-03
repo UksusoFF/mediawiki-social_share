@@ -5,5 +5,10 @@
         ]
     },
     "share": "Поделиться",
+    "share-facebook": "Facebook",
+    "share-google": "Google+",
+    "share-odnoklassniki": "Одноклассники",
+    "share-twitter": "Twitter",
+    "share-vkontakte": "ВКонтакте",
     "descriptionmsg": "Добавляет социальные кнопки в сайдбар и заголовок статьи."
 }

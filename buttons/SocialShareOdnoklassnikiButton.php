@@ -6,7 +6,7 @@
 class SocialShareOdnoklassnikiButton extends SocialShareBaseButton
 {
 
-    public $icon = 'odnoklassniki';
+    public $name = 'odnoklassniki';
 
     public function getShare()
     {

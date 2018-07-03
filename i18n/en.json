@@ -5,5 +5,10 @@
         ]
     },
     "share": "Share",
+    "share-facebook": "Facebook",
+    "share-google": "Google+",
+    "share-odnoklassniki": "Odnoklassniki",
+    "share-twitter": "Twitter",
+    "share-vkontakte": "Vkontakte",
     "descriptionmsg": "Adds social buttons to sidebar and title header."
 }

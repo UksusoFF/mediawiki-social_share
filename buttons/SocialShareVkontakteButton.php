@@ -6,7 +6,7 @@
 class SocialShareVkontakteButton extends SocialShareBaseButton
 {
 
-    public $icon = 'vkontakte';
+    public $name = 'vkontakte';
 
     public function getShare()
     {

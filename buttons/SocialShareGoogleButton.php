@@ -6,7 +6,7 @@
 class SocialShareGoogleButton extends SocialShareBaseButton
 {
 
-    public $icon = 'google';
+    public $name = 'google';
 
     public function getShare()
     {

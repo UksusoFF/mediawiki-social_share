@@ -3,7 +3,7 @@
 class SocialShareFacebookButton extends SocialShareBaseButton
 {
 
-    public $icon = 'facebook';
+    public $name = 'facebook';
 
     public function getShare()
     {

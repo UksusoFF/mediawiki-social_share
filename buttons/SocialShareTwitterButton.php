@@ -3,7 +3,7 @@
 class SocialShareTwitterButton extends SocialShareBaseButton
 {
 
-    public $icon = 'twitter';
+    public $name = 'twitter';
 
     public function getShare()
     {
