@@ -28,7 +28,7 @@ class SocialShareBaseButton
 
         $output = '';
         array_walk($attributes, function($item, $key) use (&$output) {
-            $output .= " \"$key\"=\"$item\"";
+            $output .= " $key=\"$item\"";
         });
 
         return "<a$output>" . substr($this->name, 0, 1) . "</a>";
