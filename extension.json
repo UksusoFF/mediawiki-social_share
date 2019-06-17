@@ -15,7 +15,6 @@
         "SocialShare": "SocialShare.body.php",
         "SocialShareBaseButton": "buttons/SocialShareBaseButton.php",
         "SocialShareFacebookButton": "buttons/SocialShareFacebookButton.php",
-        "SocialShareGoogleButton": "buttons/SocialShareGoogleButton.php",
         "SocialShareOdnoklassnikiButton": "buttons/SocialShareOdnoklassnikiButton.php",
         "SocialShareTwitterButton": "buttons/SocialShareTwitterButton.php",
         "SocialShareVkontakteButton": "buttons/SocialShareVkontakteButton.php"
@@ -37,8 +36,8 @@
         "SocialShareMain": true,
         "SocialShareSidebar": true,
         "SocialShareHeader": true,
-        "SocialShareServicesSidebar": "vkontakte,facebook,twitter,google,odnoklassniki",
-        "SocialShareServicesHeader": "vkontakte,facebook,twitter,google,odnoklassniki"
+        "SocialShareServicesSidebar": "vkontakte,facebook,twitter,odnoklassniki",
+        "SocialShareServicesHeader": "vkontakte,facebook,twitter,odnoklassniki"
     },
     "Hooks": {
         "ArticleViewHeader": [

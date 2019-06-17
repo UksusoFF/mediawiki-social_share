@@ -79,7 +79,6 @@ class SocialShare
     {
         $buttons = [
             'facebook' => (new SocialShareFacebookButton($title))->render(),
-            'google' => (new SocialShareGoogleButton($title))->render(),
             'twitter' => (new SocialShareTwitterButton($title))->render(),
             'vkontakte' => (new SocialShareVkontakteButton($title))->render(),
             'odnoklassniki' => (new SocialShareOdnoklassnikiButton($title))->render(),
